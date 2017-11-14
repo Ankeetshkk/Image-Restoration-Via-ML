@@ -1,0 +1,14 @@
+function x = SoftThresh(y,t)
+% SoftThresh -- Apply Soft Threshold 
+%  Usage 
+%    x = SoftThresh(y,t)
+%  Inputs 
+%    y     Noisy Data 
+%    t     Threshold
+%  Outputs 
+%    x     sign(y)(|y|-t)_+
+%
+	res = (abs(y) - t);
+	res = (res + abs(res))/2;
+	x   = sign(y).*res;
+    

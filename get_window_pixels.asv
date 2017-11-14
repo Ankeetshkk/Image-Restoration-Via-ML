@@ -1,0 +1,19 @@
+function YW = get_window_pixels(Y,m,n,i,j,l)
+
+
+YW = [];
+m_ = m+2*l;
+n_ = n+2*l;
+i_ = i+l;
+j_ = j+l;
+
+for y = -l:1:l
+% r = [];
+for x = -l:1:l
+i__ = i_+y;
+j__ = j_+x;
+index = (i__-1)*n_+(j__-1);
+YW = [YW,Y(index)];
+end
+% YW = [YW;r];
+end
